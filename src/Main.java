@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        Human maksim = new Human("Максим", 1987, "Минск", "бренд-менеджера");
-        Human anya = new Human("Аня",  1993, "Москва", "методиста образовательных программ");
-        Human katya = new Human("Катя", 1994, "Калининград", "продакт-менеджера");
-        Human artem = new Human("Артем", 1995, "Москва", "директора по развитию бизнеса");
+        Human maksim = new Human(-1987);
+        Human anya = new Human(1993,  "Аня", "Москва", "методиста образовательных программ");
+        Human katya = new Human(1994, "Катя", "Калининград", "продакт-менеджера");
+        Human artem = new Human(1995, "Артем", "Москва", "директора по развитию бизнеса");
     }
 }

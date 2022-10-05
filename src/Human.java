@@ -5,18 +5,18 @@ public class Human {
     String cityOfResidence;
     String job;
 
-    Human(String name, int yearOfBirth, String cityOfResidence) {
-        this.name = name;
-        this.cityOfResidence = cityOfResidence;
-        this.yearOfBirth = yearOfBirth;
-        this.job  = "default";
-        System.out.println("Привет! Меня зовут " + name + ". Я из города " + cityOfResidence + ". Я родился в " + yearOfBirth + " году. Будем знакомы!");
+    Human(int yearOfBirth) {
+        this (yearOfBirth, "<Информация не указана>", "<Информация не указана>", "<Информация не указана>");
     }
 
-    Human(String name, int yearOfBirth, String cityOfResidence, String job) {
+    Human(int yearOfBirth, String name, String cityOfResidence, String job) {
+        if (yearOfBirth >= 0) {
+            this.yearOfBirth = yearOfBirth;
+        } else {
+            yearOfBirth = Math.abs(yearOfBirth);
+        }
         this.name = name;
         this.cityOfResidence = cityOfResidence;
-        this.yearOfBirth = yearOfBirth;
         this.job = job;
         System.out.println("Привет! Меня зовут " + name + ". Я из города " + cityOfResidence + ". Я родился в " + yearOfBirth + " году. Я работаю на должности " + job + ". Будем знакомы!");
     }
